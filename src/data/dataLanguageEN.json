@@ -155,7 +155,7 @@
       { "name": "Name", "error": "Name is required." },
       {
         "name": "E-mail",
-        "error": ["E-mail is required.", "E-mail jest niepoprawny."]
+        "error": ["E-mail is required.", "E-mail is invalid."]
       },
       {
         "name": "Message",
