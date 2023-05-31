@@ -1,6 +1,22 @@
 {
   "projects": [
     {
+      "titlePL": "Strona w React.js",
+      "titleEN": "Website in React.js",
+      "img": "CaniMVy.png",
+      "stack": [
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "TypeScript",
+        "React",
+        "PHP",
+        "API",
+        "Payments"
+      ],
+      "live": "https://ofor.pl/"
+    },
+    {
       "titlePL": "Portfolio w Next.js",
       "titleEN": "Portfolio in Next.js",
       "img": "ci1SnX0.png",
