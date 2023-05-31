@@ -61,6 +61,10 @@
         "icon": "https://img.icons8.com/fluency/48/000000/node-js.png"
       },
       {
+        "name": "Express.js",
+        "icon": "https://img.icons8.com/color/48/ffffff/express-js.png"
+      },
+      {
         "name": "Styled Components",
         "icon": "https://img.icons8.com/color/48/000000/styled-components.png"
       },
