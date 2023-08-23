@@ -1,6 +1,12 @@
 {
   "projects": [
     {
+      "titlePL": "Bramka SMS w React.js",
+      "titleEN": "SMS gateway in React.js",
+      "img": "F4Aj0gl.png",
+      "stack": ["HTML", "Bootstrap", "TypeScript", "React", "PHP", "API"]
+    },
+    {
       "titlePL": "Strona w React.js",
       "titleEN": "Website in React.js",
       "img": "CaniMVy.png",
