@@ -11,6 +11,7 @@ import Tilt from 'react-parallax-tilt';
 import imgFormContact from '@/assets/form_contact.jpg';
 
 const Contact = ({ data }: ContactProps) => {
+  const [sending, setSending] = useState(false);
   const [statusMessage, setStatusMessage] = useState({
     status: '',
     message: '',
@@ -25,19 +26,26 @@ const Contact = ({ data }: ContactProps) => {
 
   const submitForm = async (dataForm: FormValues) => {
     try {
-      const res = await fetch('/api/send-mail', {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json, text/plain, */*',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(dataForm),
-      });
+      if (!sending) {
+        setSending(true);
+
+        await fetch('/api/send-mail', {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json, text/plain, */*',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(dataForm),
+        }).then(() => {
+          setSending(false);
+        });
+      }
+
       reset();
       setStatusMessage({ status: 'success', message: data.alert[0] });
     } catch (error) {
-      setStatusMessage({ status: 'danger', message: data.alert[1] });
       console.log('error:', error);
+      setStatusMessage({ status: 'danger', message: data.alert[1] });
     }
 
     setTimeout(() => {
@@ -120,7 +128,12 @@ const Contact = ({ data }: ContactProps) => {
 
               <div className="m-auto m-md-0 mx-md-auto">
                 <StyledButton>
-                  {data.send} <FaPaperPlane />
+                  {data.send}{' '}
+                  {sending ? (
+                    <div className="spinner-border" role="status" />
+                  ) : (
+                    <FaPaperPlane />
+                  )}
                 </StyledButton>
               </div>
             </StyledForm>
@@ -166,6 +179,8 @@ const StyledForm = styled.form`
 `;
 
 const StyledButton = styled.button`
+  display: flex;
+  align-items: center;
   padding: 13px 25px;
   border: none;
   border-radius: 5px;
@@ -185,7 +200,8 @@ const StyledButton = styled.button`
     }
   }
 
-  & > svg {
+  & > svg,
+  & > div {
     margin-left: 10px;
     transition: all 0.3s ease-in-out;
   }

@@ -20,7 +20,7 @@ const Hero = ({ data }: HeroProps) => {
 
   useEffect(() => {
     const typed = new Typed(typedElement.current, {
-      strings: ['Front-End Developer', 'Web Developer'],
+      strings: ['Front-End Developer', 'Web Developer', 'Back-End Developer'],
       startDelay: 200,
       typeSpeed: 50,
       backSpeed: 30,
