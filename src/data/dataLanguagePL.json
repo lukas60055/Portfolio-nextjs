@@ -6,7 +6,7 @@
     { "title": "Kontakt", "link": "/#kontakt" }
   ],
   "hero": {
-    "heading": "Cześć! <br /> Nazywam się <br />Łukasz <span>Duda</span>",
+    "heading": "Cześć! <br /> Nazywam się <br /><strong>Łukasz <span>Duda</span></strong>",
     "paragraph": "Jestem",
     "button": "Zobacz dalej",
     "github": "https://github.com/lukas60055/",

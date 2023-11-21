@@ -99,7 +99,7 @@ const StyledH2 = styled.h2`
     font-size: 60px;
   }
 
-  & > span {
+  & span {
     color: #ff7b00;
   }
 `;
@@ -142,6 +142,7 @@ const StyledButton = styled.button`
 
 const BoxLinks = styled.div`
   margin: 25px 0 0 20px;
+
   & > a {
     width: 46px;
     height: 46px;

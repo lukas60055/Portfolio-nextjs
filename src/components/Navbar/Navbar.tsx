@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useEffect, useId, useRef, useState } from 'react';
 import styled from 'styled-components';
+import { FaNodeJs } from 'react-icons/fa';
 import { NavbarProps } from '@/types/navbar';
 
 const Navbar = ({ data, onChangeLanguage }: NavbarProps) => {
@@ -21,8 +22,9 @@ const Navbar = ({ data, onChangeLanguage }: NavbarProps) => {
 
   return (
     <StyledNavbar className="navbar navbar-expand-lg">
-      <Link href="/" className="navbar-brand">
-        <i className="fab fa-node-js"></i> Łukasz Duda
+      <Link href="/" className="navbar-brand d-flex align-items-center">
+        <FaNodeJs className="me-1" color="green" />
+        <h1 className="m-0 fs-5">Łukasz Duda</h1>
       </Link>
 
       <button
