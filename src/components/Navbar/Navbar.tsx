@@ -23,8 +23,8 @@ const Navbar = ({ data, onChangeLanguage }: NavbarProps) => {
   return (
     <StyledNavbar className="navbar navbar-expand-lg">
       <Link href="/" className="navbar-brand d-flex align-items-center">
-        <FaNodeJs className="me-1" color="green" />
-        <h1 className="m-0 fs-5">Łukasz Duda</h1>
+        <FaNodeJs className="me-2" color="green" size={25} />
+        <h1 className="m-0 fs-4">Łukasz Duda</h1>
       </Link>
 
       <button
