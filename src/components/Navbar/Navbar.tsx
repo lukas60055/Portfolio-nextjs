@@ -5,9 +5,9 @@ import { FaNodeJs } from 'react-icons/fa';
 import { NavbarProps } from '@/types/navbar';
 
 const Navbar = ({ data, onChangeLanguage }: NavbarProps) => {
+  const ID = useId();
   const [menu, setMenu] = useState(false);
   const menuMobile = useRef<HTMLDivElement>(null);
-  const ID = useId();
 
   const hideMenu = () => {
     setMenu(false);
