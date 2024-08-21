@@ -1,0 +1,38 @@
+.boxSkills {
+  padding: 1.25rem 0.625rem;
+  border-radius: 0.625rem;
+  background-color: rgba(0, 0, 22, 0.4);
+
+  @media (min-width: 576px) {
+    padding: 1.875rem;
+  }
+
+  & h2 {
+    font-size: 1.75rem;
+  }
+}
+
+.categorySkills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  }
+}
+
+.itemSkill {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5625rem 0;
+  border-radius: 0.625rem;
+  background-color: rgba(0, 0, 22, 0.9);
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
+
+  & > h3 {
+    font-size: 1.3125rem;
+  }
+}

@@ -1,0 +1,28 @@
+.projectsLink {
+  display: flex;
+  height: 3.4375rem;
+  align-items: center;
+  padding: 0 1.875rem;
+  border: 0.125rem solid #3498db;
+  border-radius: 0.5rem;
+  font-size: 1.375rem;
+  font-weight: 500;
+  color: #fff;
+  box-shadow: 0 0 0.625rem 0.25rem rgba(28, 96, 141, 0.4),
+    0 0 2.5rem 2.5rem #3498db inset, 0 0 0 0 #3498db;
+  user-select: none;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: #3498db;
+    box-shadow: 0 0, 0 0 0.625rem 0 #3498db inset, 0 0 0.625rem 0.25rem #3498db;
+
+    & > svg {
+      transform: translateX(0.625rem);
+    }
+  }
+
+  & > svg {
+    transition: transform 0.3s ease-in-out;
+  }
+}

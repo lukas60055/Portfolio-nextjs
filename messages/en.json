@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "description": "Welcome to my portfolio! I specialize in creating Front-end, Web, and Back-end applications. Discover my skills, projects, and passion for creating meaningful online experiences."
+  },
+  "inputValidation": {
+    "required": "This field is required"
+  },
+  "navbar": {
+    "home": "Home",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "header": {
+    "greeting": "Hi!<br></br> My name is<br></br> <strong>Łukasz <span>Duda</span></strong>",
+    "profession": "I am",
+    "cta": "See more"
+  },
+  "skills": {
+    "title": "Skills",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "databases": "Databases",
+    "designTools": "Design Tools",
+    "other": "Other"
+  },
+  "projects": {
+    "title": "Projects",
+    "heading": "Completed <span>projects</span>",
+    "viewLive": "Live Preview",
+    "viewCode": "View Code",
+    "noPreview": "No Preview",
+    "viewMore": "See More"
+  },
+  "contact": {
+    "title": "Contact",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "sendMessage": "Send Message",
+    "formValidation": {
+      "invalidEmail": "Invalid email address",
+      "shortMessage": "Message is too short",
+      "messageSent": "Message has been sent",
+      "sendingError": "An error occurred while sending"
+    }
+  },
+  "footer": "Designed with <icon></icon> by",
+  "notFound": {
+    "pageNotFound": "Page not found",
+    "backToHome": "Back to Home"
+  }
+}

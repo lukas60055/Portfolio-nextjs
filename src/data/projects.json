@@ -1,0 +1,137 @@
+[
+  {
+    "img": "F4Aj0gl.png",
+    "stack": ["HTML", "Bootstrap", "TypeScript", "React", "JWT", "PHP", "API"],
+    "translations": {
+      "pl": "Bramka SMS",
+      "en": "SMS Gateway"
+    }
+  },
+  {
+    "img": "oe2hEzh.png",
+    "stack": ["Node.js", "TypeScript", "JWT", "Express.js", "Knex.js"],
+    "code": "https://github.com/lukas60055/simple-auth-backends",
+    "translations": {
+      "pl": "API uwierzytelniające",
+      "en": "Authentication API"
+    }
+  },
+  {
+    "img": "ci1SnX0.png",
+    "stack": [
+      "HTML",
+      "Bootstrap",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Styled Components",
+      "API"
+    ],
+    "live": "https://lukaspro.pl",
+    "code": "https://github.com/lukas60055/Portfolio-nextjs",
+    "translations": {
+      "pl": "Portfolio",
+      "en": "Portfolio"
+    }
+  },
+  {
+    "img": "CaniMVy.png",
+    "stack": [
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "TypeScript",
+      "React",
+      "PHP",
+      "API",
+      "Payments"
+    ],
+    "translations": {
+      "pl": "Strona w React",
+      "en": "React Website"
+    }
+  },
+  {
+    "img": "k8vGgIY.png",
+    "stack": ["HTML", "Bootstrap", "TypeScript", "React", "Styled Components"],
+    "live": "https://lukas60055.github.io/React-Landing-Page-Ebook",
+    "code": "https://github.com/lukas60055/React-Landing-Page-Ebook",
+    "translations": {
+      "pl": "Landing Page w React",
+      "en": "React Landing Page"
+    }
+  },
+  {
+    "img": "ftbgSCf.png",
+    "stack": ["HTML", "SCSS", "JavaScript", "TypeScript"],
+    "live": "https://lukas60055.github.io/Snake-Game-TypeScript",
+    "code": "https://github.com/lukas60055/Snake-Game-TypeScript",
+    "translations": {
+      "pl": "Gra w JavaScript",
+      "en": "JavaScript Game"
+    }
+  },
+  {
+    "img": "vgfcgo4.png",
+    "stack": ["CSS", "JavaScript"],
+    "translations": {
+      "pl": "Ulepszona mapa interaktywna",
+      "en": "Enhanced Interactive Map"
+    }
+  },
+  {
+    "img": "QVubloL.png",
+    "stack": ["HTML", "CSS", "JavaScript", "PHP", "WordPress"],
+    "live": "http://rubiconmedia.pl/",
+    "translations": {
+      "pl": "Migracja HTML do WordPress",
+      "en": "HTML to WordPress Migration"
+    }
+  },
+  {
+    "img": "7gAQydx.png",
+    "stack": ["HTML", "CSS", "PHP", "WordPress"],
+    "code": "https://github.com/lukas60055/bonbons-wordpress-theme",
+    "translations": {
+      "pl": "Prosty szablon WordPress",
+      "en": "Simple WordPress Theme"
+    }
+  },
+  {
+    "img": "nmt9Xzz.png",
+    "stack": ["HTML", "SCSS", "JavaScript", "jQuery", "PHP"],
+    "live": "https://web-hub.pl/",
+    "code": "https://github.com/lukas60055/webhub-www",
+    "translations": {
+      "pl": "Strona internetowa",
+      "en": "Website"
+    }
+  },
+  {
+    "img": "Fu7PSk0.png",
+    "stack": ["CSS", "WordPress", "Photoshop"],
+    "live": "https://www.matysikserwis.pl/",
+    "translations": {
+      "pl": "Strona w WordPress",
+      "en": "WordPress Website"
+    }
+  },
+  {
+    "img": "lwAU3Py.png",
+    "stack": ["CSS", "WordPress"],
+    "live": "https://bartoszgodlewski.pl/",
+    "translations": {
+      "pl": "Strona w WordPress",
+      "en": "WordPress Website"
+    }
+  },
+  {
+    "img": "ItsWiER.png",
+    "stack": ["CSS", "WordPress"],
+    "live": "https://schronywlodzi.pl/",
+    "translations": {
+      "pl": "Strona w WordPress",
+      "en": "WordPress Website"
+    }
+  }
+]

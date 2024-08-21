@@ -1,6 +1,17 @@
-import { InputProps } from '@/types/input';
+import { useTranslations } from 'next-intl';
+import { InputProps } from '@/types/components/Input/Input';
 
-const InputText = (props: InputProps) => {
+function InputText(props: InputProps) {
+  const t = useTranslations('inputValidation');
+
+  const registrationOptions = {
+    ...props.validationSchema,
+    required:
+      props.validationSchema?.required === true
+        ? t('required')
+        : props.validationSchema?.required,
+  };
+
   return (
     <div
       className={`position-relative ${
@@ -9,52 +20,64 @@ const InputText = (props: InputProps) => {
     >
       <input
         type={props.type}
-        name={props.name}
         className={`form-control ${
           props.errors[props.name] ? 'is-invalid' : ''
         }`}
         placeholder={props.placeholder}
-        {...props.register(props.name, props.validationSchema)}
+        {...props.register?.(
+          props.name,
+          props.validationSchema ? registrationOptions : undefined
+        )}
       />
-      <div className="invalid-feedback">
-        {props.errors[props.name]?.message}
+      <div className="invalid-feedback fw-medium">
+        {props.errors && (props.errors[props.name]?.message as string)}
       </div>
       {props.children}
     </div>
   );
-};
+}
 
-const InputTextarea = (props: InputProps) => {
+function InputTextarea(props: InputProps) {
+  const t = useTranslations('inputValidation');
+
+  const registrationOptions = {
+    ...props.validationSchema,
+    required:
+      props.validationSchema?.required === true
+        ? t('required')
+        : props.validationSchema?.required,
+  };
+
   return (
-    <div className="position-relative mb-3">
+    <div
+      className={`position-relative ${
+        props.errors[props.name] ? 'mb-2' : 'mb-3'
+      }`}
+    >
       <textarea
-        name={props.name}
         rows={props.rows}
         className={`form-control ${
           props.errors[props.name] ? 'is-invalid' : ''
         }`}
         placeholder={props.placeholder}
-        {...props.register(props.name, props.validationSchema)}
+        {...props.register?.(
+          props.name,
+          props.validationSchema ? registrationOptions : undefined
+        )}
       />
-      <div className="invalid-feedback">
-        {props.errors[props.name]?.message}
+      <div className="invalid-feedback fw-medium">
+        {props.errors && (props.errors[props.name]?.message as string)}
       </div>
       {props.children}
     </div>
   );
-};
+}
 
-const Input = (props: InputProps) => {
-  switch (props.type) {
+export default function Input({ type = 'text', ...props }: InputProps) {
+  switch (type) {
     case 'textarea':
       return <InputTextarea {...props} />;
     default:
       return <InputText {...props} />;
   }
-};
-
-Input.defaultProps = {
-  type: 'text',
-};
-
-export default Input;
+}

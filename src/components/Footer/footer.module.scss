@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  height: 3.4375rem;
+  align-items: center;
+  text-align: center;
+  background-color: #00012b;
+}
+
+.paragraph {
+  letter-spacing: 0.0625rem;
+  color: #fff;
+
+  & > svg {
+    color: #ff0000;
+    animation: pulse 0.4s infinite alternate;
+
+    @keyframes pulse {
+      to {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  & > a {
+    color: #ffae00;
+  }
+}

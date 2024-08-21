@@ -1,133 +1,84 @@
-import Link from 'next/link';
-import { useEffect, useId, useRef, useState } from 'react';
-import styled from 'styled-components';
+'use client';
+import { useTranslations } from 'next-intl';
+import { useEffect, useId } from 'react';
 import { FaNodeJs } from 'react-icons/fa';
-import { NavbarProps } from '@/types/navbar';
+import styles from './navbar.module.scss';
+import { usePathname, useRouter } from '@/navigation';
+import NavigationLink from '@/components/NavigationLink/NavigationLink';
+import { LocalesType } from '@/types/LocalesType';
+import { removePolishCharacters } from '@/utils/removePolishCharacters';
 
-const Navbar = ({ data, onChangeLanguage }: NavbarProps) => {
+export default function Navbar() {
   const ID = useId();
-  const [menu, setMenu] = useState(false);
-  const menuMobile = useRef<HTMLDivElement>(null);
+  const router = useRouter();
+  const pathname = usePathname();
+  const t = useTranslations('navbar');
 
-  const hideMenu = () => {
-    setMenu(false);
-    document.removeEventListener('scroll', hideMenu);
-    document.querySelector('main')?.removeEventListener('click', hideMenu);
+  const itemsLink = [
+    { translation: 'home', href: '/' },
+    { translation: 'skills', href: '/#skills' },
+    { translation: 'projects', href: '/#projects' },
+    { translation: 'contact', href: '/#contact' },
+  ];
+
+  const onChangeLanguage = (locale: LocalesType) => {
+    router.replace(pathname, { locale });
   };
 
   useEffect(() => {
-    document.addEventListener('scroll', hideMenu);
-    document.querySelector('main')?.addEventListener('click', hideMenu);
-  }, [menu]);
+    require('bootstrap/dist/js/bootstrap.min.js');
+  }, []);
 
   return (
-    <StyledNavbar className="navbar navbar-expand-lg">
-      <Link href="/" className="navbar-brand d-flex align-items-center">
-        <FaNodeJs className="me-2" color="green" size={25} />
-        <h1 className="m-0 fs-4">Łukasz Duda</h1>
-      </Link>
-
-      <button
-        className="navbar-toggler"
-        type="button"
-        onClick={() => setMenu(!menu)}
+    <nav className={`${styles.navbar} navbar navbar-expand-lg`}>
+      <NavigationLink
+        href="/"
+        className="navbar-brand d-flex align-items-center"
       >
-        <span className="navbar-toggler-icon"></span>
+        <FaNodeJs className="me-2" color="green" size={28} />
+        <h1 className="m-0 fs-3">Łukasz Duda</h1>
+      </NavigationLink>
+      <button
+        type="button"
+        className="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseNavbar"
+        aria-controls="collapseNavbar"
+        aria-label="Toggle navigation"
+      >
+        <span className="navbar-toggler-icon" />
       </button>
       <div
-        ref={menuMobile}
-        className={`collapse navbar-collapse flex-lg-grow-0 text-center mt-3 mt-lg-0 ${
-          menu ? 'show' : ''
-        }`}
+        id="collapseNavbar"
+        className="position-relative collapse navbar-collapse flex-lg-grow-0 mt-3 mt-lg-0"
       >
-        <ul className="navbar-nav nav-pills align-items-center mb-3 mb-lg-0 me-lg-5">
-          {data.map((link, index) => (
+        <ul className="navbar-nav align-items-center column-gap-3">
+          {itemsLink.map((link, index) => (
             <li key={`${ID}-${index}`} className="nav-item">
-              <StyledLink
-                href={link.link}
-                className="nav-link me-lg-2"
-                scroll={false}
+              <NavigationLink
+                href={removePolishCharacters(link.href)}
+                className={`${styles.navbar__link} nav-link`}
               >
-                {link.title}
-              </StyledLink>
+                {t(link.translation)}
+              </NavigationLink>
             </li>
           ))}
+          <li
+            className={`${styles.navbar__flag} nav-item d-flex ms-lg-3 pt-3 pt-lg-0`}
+          >
+            <input
+              type="image"
+              src="/flags/en.svg"
+              onClick={() => onChangeLanguage('en')}
+            />
+            <input
+              type="image"
+              src="/flags/pl.svg"
+              onClick={() => onChangeLanguage('pl')}
+            />
+          </li>
         </ul>
-        <Flag
-          type="image"
-          src="/poland-flag-icon.svg"
-          onClick={() => {
-            onChangeLanguage('PL');
-            hideMenu();
-          }}
-        />
-        <Flag
-          type="image"
-          src="/united-kingdom-flag-icon.svg"
-          className="ms-3"
-          onClick={() => {
-            onChangeLanguage('EN');
-            hideMenu();
-          }}
-        />
       </div>
-    </StyledNavbar>
+    </nav>
   );
-};
-
-export default Navbar;
-
-const StyledNavbar = styled.nav`
-  position: fixed;
-  width: 100%;
-  top: 0;
-  justify-content: space-around;
-  padding: 17px 0;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(146, 161, 176, 0.4);
-  z-index: 10;
-
-  @media (max-width: 991px) {
-    & .navbar-collapse {
-      position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        top: -5%;
-        left: 0;
-        border-top: 1px solid rgba(115, 115, 115, 0.4);
-      }
-    }
-  }
-`;
-
-const StyledLink = styled(Link)`
-  padding: 0;
-  border-radius: 0 !important;
-  font-weight: bold;
-  font-size: 18px;
-  color: #0e2431;
-  transition: all 0.2s linear;
-
-  &:hover {
-    padding: 5px 0;
-    border-bottom: 2px solid #011aff;
-  }
-
-  @media (max-width: 991px) {
-    font-size: 20px;
-  }
-`;
-
-const Flag = styled.input`
-  width: 28px;
-  height: 20px;
-  box-shadow: 0 2px 6px rgba(66, 68, 90, 0.75);
-
-  @media (min-width: 992px) {
-    width: 25px;
-    height: 17px;
-  }
-`;
+}

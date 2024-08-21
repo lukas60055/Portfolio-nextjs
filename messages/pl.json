@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "description": "Witaj w moim portfolio! Specjalizuję się w tworzeniu aplikacji Front-endowych, Webowych oraz Back-endowych. Odkryj moje umiejętności, projekty oraz pasję do tworzenia znaczących doświadczeń internetowych."
+  },
+  "inputValidation": {
+    "required": "Wypełnij to pole"
+  },
+  "navbar": {
+    "home": "Strona główna",
+    "skills": "Umiejętności",
+    "projects": "Projekty",
+    "contact": "Kontakt"
+  },
+  "header": {
+    "greeting": "Cześć!<br></br> Nazywam się<br></br> <strong>Łukasz <span>Duda</span></strong>",
+    "profession": "Jestem",
+    "cta": "Zobacz dalej"
+  },
+  "skills": {
+    "title": "Umiejętności",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "databases": "Bazy danych",
+    "designTools": "Narzędzia projektowe",
+    "other": "Inne"
+  },
+  "projects": {
+    "title": "Projekty",
+    "heading": "Wykonane <span>projekty</span>",
+    "viewLive": "Podgląd",
+    "viewCode": "Zobacz kod",
+    "noPreview": "Brak podglądu",
+    "viewMore": "Zobacz więcej"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "name": "Imię i nazwisko",
+    "email": "E-mail",
+    "message": "Wiadomość",
+    "sendMessage": "Wyślij wiadomość",
+    "formValidation": {
+      "invalidEmail": "E-mail jest niepoprawny",
+      "shortMessage": "Wiadomość jest za krótka",
+      "messageSent": "Wiadomość została wysłana",
+      "sendingError": "Wystąpił błąd podczas wysyłania"
+    }
+  },
+  "footer": "Zaprojektowane z <icon></icon> przez",
+  "notFound": {
+    "pageNotFound": "nie znaleziono strony",
+    "backToHome": "Powrót na stronę główną"
+  }
+}
