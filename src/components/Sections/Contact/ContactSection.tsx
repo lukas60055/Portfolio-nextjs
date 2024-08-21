@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FieldValues, useForm } from 'react-hook-form';
 import Tilt from 'react-parallax-tilt';
 import { TbMessages } from 'react-icons/tb';
@@ -56,6 +56,16 @@ export default function ContactSection() {
       setSending(false);
     }
   };
+
+  useEffect(() => {
+    if (statusMessage) {
+      const timer = setTimeout(() => {
+        setStatusMessage(undefined);
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [statusMessage]);
 
   return (
     <Section

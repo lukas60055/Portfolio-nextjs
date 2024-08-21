@@ -1,9 +1,10 @@
 'use client';
+import { useParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import { useEffect, useId } from 'react';
+import { useEffect, useId, useTransition } from 'react';
 import { FaNodeJs } from 'react-icons/fa';
 import styles from './navbar.module.scss';
-import { usePathname, useRouter } from '@/navigation';
+import { useRouter, usePathname } from '@/navigation';
 import NavigationLink from '@/components/NavigationLink/NavigationLink';
 import { LocalesType } from '@/types/LocalesType';
 import { removePolishCharacters } from '@/utils/removePolishCharacters';
@@ -11,7 +12,9 @@ import { removePolishCharacters } from '@/utils/removePolishCharacters';
 export default function Navbar() {
   const ID = useId();
   const router = useRouter();
+  const params = useParams();
   const pathname = usePathname();
+  const [isPending, startTransition] = useTransition();
   const t = useTranslations('navbar');
 
   const itemsLink = [
@@ -22,7 +25,10 @@ export default function Navbar() {
   ];
 
   const onChangeLanguage = (locale: LocalesType) => {
-    router.replace(pathname, { locale });
+    startTransition(() => {
+      // @ts-expect-error
+      router.replace({ pathname, params }, { locale });
+    });
   };
 
   useEffect(() => {

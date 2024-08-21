@@ -3,7 +3,6 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/styles/globals.scss';
-import { locales } from '@/config';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
 

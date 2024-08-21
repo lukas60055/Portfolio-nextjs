@@ -29,7 +29,7 @@ export default function ProjectsSection() {
           </div>
         ))}
         <div className="d-flex justify-content-center mt-4">
-          <NavigationLink className={styles.projectsLink} href="projects">
+          <NavigationLink href="/projects" className={styles.projectsLink}>
             {t('viewMore')} <BiLogInCircle className="ms-3" />
           </NavigationLink>
         </div>
