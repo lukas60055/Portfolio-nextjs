@@ -10,7 +10,7 @@
   {
     "img": "oe2hEzh.png",
     "stack": ["Node.js", "TypeScript", "JWT", "Express.js", "Knex.js"],
-    "code": "https://github.com/lukas60055/simple-auth-backends",
+    "code": "https://github.com/lukas60055/simple-auth-backend",
     "translations": {
       "pl": "API uwierzytelniające",
       "en": "Authentication API"
@@ -28,7 +28,7 @@
       "API"
     ],
     "live": "https://lukaspro.pl",
-    "code": "https://github.com/lukas60055/Portfolio-nextjs",
+    "code": "https://github.com/lukas60055/portfolio-nextjs",
     "translations": {
       "pl": "Portfolio",
       "en": "Portfolio"
