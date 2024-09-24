@@ -4,7 +4,12 @@ import { useTranslations } from 'next-intl';
 import { useEffect, useRef } from 'react';
 import Tilt from 'react-parallax-tilt';
 import Typed from 'typed.js';
-import { FaArrowCircleDown, FaGithub, FaEnvelope } from 'react-icons/fa';
+import {
+  FaArrowCircleDown,
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+} from 'react-icons/fa';
 import styles from './header.module.scss';
 import Particles from '@/components/Particles/Particles';
 import imgHero from '@/assets/img/hero.png';
@@ -59,6 +64,12 @@ export default function Header() {
               <div className={styles.links}>
                 <a href="https://github.com/lukas60055" target="_blank">
                   <FaGithub />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/dudalukasz"
+                  target="_blank"
+                >
+                  <FaLinkedin />
                 </a>
                 <a href="mailto:kontakt@lukaspro.pl">
                   <FaEnvelope />

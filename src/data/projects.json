@@ -1,5 +1,14 @@
 [
   {
+    "img": "2UscMZq.png",
+    "stack": ["HTML", "Bootstrap", "TypeScript", "React", "Next.js", "API"],
+    "live": "https://hotelioz.com",
+    "translations": {
+      "pl": "Projekt w React i Next.js",
+      "en": "Project in React and Next.js"
+    }
+  },
+  {
     "img": "F4Aj0gl.png",
     "stack": ["HTML", "Bootstrap", "TypeScript", "React", "JWT", "PHP", "API"],
     "translations": {
@@ -82,7 +91,7 @@
   {
     "img": "QVubloL.png",
     "stack": ["HTML", "CSS", "JavaScript", "PHP", "WordPress"],
-    "live": "http://rubiconmedia.pl/",
+    "live": "http://rubiconmedia.pl",
     "translations": {
       "pl": "Migracja HTML do WordPress",
       "en": "HTML to WordPress Migration"
@@ -100,7 +109,7 @@
   {
     "img": "nmt9Xzz.png",
     "stack": ["HTML", "SCSS", "JavaScript", "jQuery", "PHP"],
-    "live": "https://web-hub.pl/",
+    "live": "https://web-hub.pl",
     "code": "https://github.com/lukas60055/webhub-www",
     "translations": {
       "pl": "Strona internetowa",
@@ -110,7 +119,7 @@
   {
     "img": "Fu7PSk0.png",
     "stack": ["CSS", "WordPress", "Photoshop"],
-    "live": "https://www.matysikserwis.pl/",
+    "live": "https://www.matysikserwis.pl",
     "translations": {
       "pl": "Strona w WordPress",
       "en": "WordPress Website"
@@ -119,7 +128,7 @@
   {
     "img": "lwAU3Py.png",
     "stack": ["CSS", "WordPress"],
-    "live": "https://bartoszgodlewski.pl/",
+    "live": "https://bartoszgodlewski.pl",
     "translations": {
       "pl": "Strona w WordPress",
       "en": "WordPress Website"
@@ -128,7 +137,7 @@
   {
     "img": "ItsWiER.png",
     "stack": ["CSS", "WordPress"],
-    "live": "https://schronywlodzi.pl/",
+    "live": "https://schronywlodzi.pl",
     "translations": {
       "pl": "Strona w WordPress",
       "en": "WordPress Website"
